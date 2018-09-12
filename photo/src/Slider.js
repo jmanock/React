@@ -7,15 +7,33 @@ export default class Slider extends React.Component{
   constructor(props){
     super(props);
 
-    this.state = {};
+    this.state = {
+      images:[''],
+      currentIndex:0
+    };
+  }
+
+  goToPrevSlide = () => {
+
+  }
+
+  goToNextSlide = () => {
+    this.setState(prevState => ({
+      currentIndex:prevState.currentIndex + 1
+    }));
   }
 
   render(){
     return(
       <div className='slider'>
-        <Slid />
-        <LeftArrow />
-        <RightArrow />
+        {
+          this.state.images.map((image,i) =>(
+            <Slid key={i} image={image} />
+          ))
+        }
+        
+        <LeftArrow goToPrevSlide={this.goToPrevSlide}/>
+        <RightArrow goToNextSlide={this.goToNextSlide}/>
       </div>
     );
   }
