@@ -1,15 +1,15 @@
 import React from 'react';
-import {Slid} from './Slid';
-import {LeftArrow} from './LeftArrow';
-import {RightArrow} from './RightArrow';
+import Slide from './Slide';
+import LeftArrow from './LeftArrow';
+import RightArrow form './RightArrow'
 
 export default class Slider extends React.Component{
   constructor(props){
     super(props);
 
-    this.state = {
-      images:[''],
-      currentIndex:0
+    this.state{
+      images:['one', 'two', 'three', 'four', 'five'],
+      currentIndex:0;
     };
   }
 
@@ -26,14 +26,9 @@ export default class Slider extends React.Component{
   render(){
     return(
       <div className='slider'>
-        {
-          this.state.images.map((image,i) =>(
-            <Slid key={i} image={image} />
-          ))
-        }
-        
+        <Slide />
         <LeftArrow goToPrevSlide={this.goToPrevSlide}/>
-        <RightArrow goToNextSlide={this.goToNextSlide}/>
+        <RightArrow goToNextSlide={this.goToNextSlide} />
       </div>
     );
   }
