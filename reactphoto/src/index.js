@@ -79,8 +79,50 @@ var PhotoBlock = React.createClass({
       );
     }else if(numImages == 2){
       <div className='photoBlock'>
-        <Photo onClick
+        <Photo onClick={this.props.onPhotoClick.bind(this,0)} className='cell_2h' photoURL={this.props.images[0]} />
+        <Photo onClick={this.props.onPhotoClick.bind(this,1)} className='cell_2h' photoURL={this.props.images[1]} />
       </div>
+    }else if(numImages === 3){
+      <div className='photoBlock'>
+        <Photo onClick={this.props.onPhotoClick.bind(this,0)} className='cell_2v' photoURL={this.props.images[0]} />
+        <Photo onClick={this.props.onPhotoClick.bind(this,1)} className='cell_4' photoURL={this.props.images[1]} />
+        <Photo onClick={this.props.onPhotoClick.bind(this,2)} className='cell_4' photoURL={this.props.images[2]} />
+      </div>
+    }else{
+      return(
+        <div className='photoBlock'>
+          <Photo onClick={this.props.onPhotoClick.bind(this,0)} className='cell_4' photoURL={this.props.images[0]} />
+          <Photo onClick={this.props.onPhotoClick.bind(this,1)} className='cell_4' photoURL={this.props.images[1]} />
+          <Photo onClick={this.props.onPhotoClick.bind(this,2)} className='cell_4' photoURL={this.props.images[2]} />
+          <Photo onClick={this.props.onPhotoClick.bind(this,3)} className='cell_4' photoURL={this.props.images[3]} />
+        </div>
+      );
     }
   }
-})
+});
+
+var Photo = React.createClass({
+  render:function(){
+    var divStyle = {
+      backgroundImage:'url('+this.props.photoURL +')'
+    };
+    return(
+      <div className={'photoPreview'+this.props.className} style={divStyle} onClick={this.props.onClick} />
+    );
+  }
+});
+
+var FullPhoto = React.createClass({
+  render:function(){
+    if(!this.props.photURL){
+      return(<div />);
+    }
+    return(
+      <div className='fullPhoto' onClick={this.props.onClick}>
+        <img src={this.props.photoURL} /> {this.props.children}
+      </div>
+    );
+  }
+});
+
+var 
