@@ -280,7 +280,72 @@ Gallery.displayName = 'Gallery';
 
 Gallery.propTypes = {
   images:PropTypes.arrayOf(
-    src:PropTypes.string.isRequired,
-    alt:PropTypes.string,
-  )
-}
+    PropTypes.shape({
+      src:PropTypes.string.isRequired,
+      alt:PropTypes.string,
+      thumbnail:PropTypes.string.isRequired,
+      srcset:PropTypes.array,
+      caption:PropTypes.string,
+      tags:PropTypes.arrayOf(
+        PropTypes.shape({
+          value:PropTypes.string.isRequired,
+          title:PropTypes.string.isRequired
+        })
+      ),
+      thumbnailWidth:PropTypes.number.isRequired,
+      thumbnailHeight:PropTypes.number.isRequired,
+      isSelected:PropTypes.bool,
+      thumbnailCaption:PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element
+      ])
+    })
+  ).isRequired,
+  id:PropTypes.string,
+  enableImageSelection:PropTypes.bool,
+  onSelectImage:PropTypes.func,
+  rowHeight:PropTypes.number,
+  maxRows:PropTypes.number,
+  margin:PropTypes.number,
+  onClickThumbnail:PropTypes.func,
+  lightboxWillOpen:PropTypes.func,
+  lightboxWillClose:PropTypes.func,
+  enableLightbox:PropTypes.bool,
+  backdropClosesModal:propTypes.bool,
+  currentImage:PropTypes.number,
+  preloadNextImage:PropTypes.bool,
+  customControls:PropTypes.arrayOf(PropTypes.node),
+  currentImageWIllChange:PropTypes.func,
+  enableKeyboardInput:PropTypes.bool,
+  imageCountSeparator:PropTypes.string,
+  isOpen:PropTypes.bool,
+  onClickImage:PropTypes.func,
+  onClickNext:PropTypes.func,
+  onClickPrev:PropTypes.func,
+  onClose:PropTypes.func,
+  showCloseButton:PropTypes.bool,
+  showImageCount:PropTypes.bool,
+  lightboxWidth:PropTypes.number,
+  tileViewportStyle:PropTypes.func,
+  showLightboxThumbnails:PropTypes.bool,
+  onClickLightboxThumbnail:PropTypes.func,
+  tagStyle:PropTypes.object
+};
+
+Gallery.defaultProps = {
+  id:'ReactGridGallery',
+  enableImageSelection:true,
+  rowHeight:180,
+  margin:2,
+  enableLightbox:true,
+  backdropClosesModal:false,
+  currentImage:0,
+  preloadNextImage:true,
+  enableKeyboardInput:true,
+  imageCountSeparator:' of ',
+  isOpen:false,
+  showCloseButton:true,
+  showImageCount:true,
+  lightboxWidth:1024,
+  showLightboxThumbnails:false
+};
