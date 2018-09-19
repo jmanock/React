@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {data} from './images';
+import './App.css';
 
 const app = document.getElementById('root');
 
@@ -75,11 +76,8 @@ class Tile extends React.Component{
         width:'62vw',
         height:'62vw',
         position:'absolute',
-        top:'50%',
-        left:'50%',
+        left:'25%',
         margin:0,
-        marginTop:'-31vw',
-        marginLeft:'-31vw',
         boxShadow:'0 0 40px 5px rgba(0,0,0,0.3)',
         transform:'none'
       };
@@ -92,6 +90,7 @@ class Tile extends React.Component{
 
     return(
       <div className='tile'>
+        <small>{this.props.data.name}</small>
         <img onMouseEnter={this._mouseEnter} onMouseLeave={this._mouseLeave} onClick={this._clickHandler} src={this.props.data.image} alt={this.props.data.name} style={tileStyle} />
       </div>
     );

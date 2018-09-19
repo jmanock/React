@@ -66,7 +66,7 @@ export const data = [
     },
     {
       id:14,
-      name:'A replica of the last wooden ship built, flags are 144 feet high',
+      name:'A replica of The Wyoming, flags are 144 feet high',
       image:require('./images/14.jpg')
     },
     {
@@ -171,12 +171,12 @@ export const data = [
     },
     {
       id:35,
-      name:'Nap at the state mesuem',
+      name:'Nap at the State Museum',
       image:require('./images/35.jpg')
     },
     {
       id:36,
-      name:'Maine state Capital',
+      name:'Maine State Capital',
       image:require('./images/36.jpg')
     },
     {
@@ -231,7 +231,142 @@ export const data = [
     },
     {
       id:47,
-      name:'Last meal Logan airport "Walburgers"',
+      name:'Last meal Logan Airport "Wahlburgers"',
       image:require('./images/47.jpg')
+    },
+    {
+      id:48,
+      name:'Blueberry Pancakes from the SeaGull',
+      image:require('./images/48.jpg')
+    },
+    {
+      id:49,
+      name:'Beautiful Day out',
+      image:require('./images/49.jpg')
+    },
+    {
+      id:50,
+      name:'Sun rays on a boat',
+      image:require('./images/50.jpg')
+    },
+    {
+      id:51,
+      name:'Let there be light',
+      image:require('./images/51.jpg')
+    },
+    {
+      id:52,
+      name:'Again',
+      image:require('./images/52.jpg')
+    },
+    {
+      id:53,
+      name:'The Wyoming',
+      image:require('./images/53.jpg')
+    },
+    {
+      id:54,
+      name:'Perfect day',
+      image:require('./images/54.jpg')
+    },
+    {
+      id:55,
+      name:'View from inside',
+      image:require('./images/55.jpg')
+    },
+    {
+      id:56,
+      name:'Pemaquid Lighthouse',
+      image:require('./images/56.jpg')
+    },
+    {
+      id:57,
+      name:'The SeaGull',
+      image:require('./images/57.jpg')
+    },
+    {
+      id:58,
+      name:'Incoming',
+      image:require('./images/58.jpg')
+    },
+    {
+      id:59,
+      name:'Sailing Away',
+      image:require('./images/59.jpg')
+    },
+    {
+      id:60,
+      name:'Wawenock Golf Club',
+      image:require('./images/60.jpg')
+    },
+    {
+      id:61,
+      name:'The putting green',
+      image:require('./images/61.jpg')
+    },
+    {
+      id:62,
+      name:'Me hitting the range',
+      image:require('./images/62.jpg')
+    },
+    {
+      id:63,
+      name:'Its a beautiful morning',
+      image:require('./images/63.jpg')
+    },
+    {
+      id:64,
+      name:'Sunset at Shaws',
+      image:require('./images/64.jpg')
+    },
+    {
+      id:65,
+      name:'The Cupboard',
+      image:require('./images/65.jpg')
+    },
+    {
+      id:66,
+      name:'Brit on the rocks',
+      image:require('./images/66.jpg')
+    },
+    {
+      id:67,
+      name:'Mountains in the distance',
+      image:require('./images/67.jpg')
+    },
+    {
+      id:68,
+      name:'Back of the house',
+      image:require('./images/68.jpg')
+    },
+    {
+      id:69,
+      name:'Unreal',
+      image:require('./images/69.jpg')
+    },
+    {
+      id:70,
+      name:'Leaves changing',
+      image:require('./images/70.jpg')
+    },
+    {
+      id:71,
+      name:'Breakfast time',
+      image:require('./images/71.jpg')
+    },
+    {
+      id:72,
+      name:'Rough seas',
+      image:require('./images/72.jpg')
+    },
+    {
+      id:73,
+      name:'Doe!',
+      image:require('./images/73.jpg')
+    },
+    {
+      id:74,
+      name:'A Deer!',
+      image:require('./images/74.jpg')
     }
   ];
