@@ -1,5 +1,4 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import firebase from 'firebase';
 
 var config = {
   apiKey: "AIzaSyDnIkpV3_WG6C43hWc_Y6XsReysADxNSmA",
@@ -9,13 +8,6 @@ var config = {
   storageBucket: "react-25b21.appspot.com",
   messagingSenderId: "930344019073"
 };
+firebase.initializeApp(config);
 
-if(!firebase.app.length){
-  firebase.initializeApp(config);
-}
-
-const auth = firebase.auth();
-
-export{
-  auth
-};
+export default firebase;
