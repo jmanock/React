@@ -1,14 +1,12 @@
 {
-  "name": "react-turbo",
+  "name": "food-fun",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "firebase": "^5.5.1",
-    "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "1.1.5",
-    "trim": "0.0.1"
+    "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
